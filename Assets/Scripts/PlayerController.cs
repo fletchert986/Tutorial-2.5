@@ -17,7 +17,8 @@ public class PlayerController : MonoBehaviour
    
     void Update()
     {
-        
+        if (Input.GetKey("escape"))
+            Application.Quit();
     }
 
     private void FixedUpdate()
