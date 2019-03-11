@@ -1,18 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
 
     private Rigidbody2D rb2d;
+    private int count;
 
     public float speed;
     public float jumpForce;
+    //public Text countText;
+    //public Text winText;
 
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        count = 0;
+        //winText.text = "";
+        //SetCountText();
     }
    
     void Update()
@@ -47,16 +54,16 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count++;
-            SetCountText();
+            //SetCountText();
         }
     }
 
-    void SetCountText()
+    /*void SetCountText()
     {
         countText.text = "Count: " + count.ToString();
         if (count >= 12)
         {
             winText.text = "You Win!";
         }
-    }
+    }*/
 }
